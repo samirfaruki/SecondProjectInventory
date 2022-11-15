@@ -13,5 +13,6 @@ CategorySchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
   return `/catalog/category/${this._id}`;
 });
+categoryModel= mongoose.model("Category", CategorySchema);
 
-module.exports = mongoose.model("Category", CategorySchema);
+module.exports = categoryModel;
