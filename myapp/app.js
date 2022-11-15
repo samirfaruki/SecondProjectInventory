@@ -7,8 +7,10 @@ const mongoose = require("mongoose");
 const mongoDB =
   "mongodb+srv://samir:8910531665@cluster0.9vwpyfe.mongodb.net/local_store?retryWrites=true&w=majority";
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+// var indexRouter = require("./routes/index");
+// var usersRouter = require("./routes/users");
+var categoryRouter = require("./routes/catalog");
+var productRouter = require("./routes/catalog");
 
 var app = express();
 
@@ -22,8 +24,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+// app.use("/", indexRouter);
+// app.use("/users", usersRouter);
+app.use("/", categoryRouter);
+app.use("/product", productRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

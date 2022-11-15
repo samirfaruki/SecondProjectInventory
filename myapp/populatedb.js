@@ -102,51 +102,51 @@ function createProducts(cb) {
           "The tomato is the edible berry of the plant Solanum lycopersicum",
           44,
           50,
-          categories[1],
+          categories[0],
 
           callback
         );
       },
       function (callback) {
         productCreate(
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/800px-Tomato_je.jpg",
-          "Tomato",
-          "The tomato is the edible berry of the plant Solanum lycopersicum",
-          44,
-          50,
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/White%2C_Brown%2C_Red_%26_Wild_rice.jpg/800px-White%2C_Brown%2C_Red_%26_Wild_rice.jpg",
+          "Rice",
+          "Rice is the seed of the grass species Oryza sativa (Asian rice) or less commonly Oryza glaberrima (African rice)",
+          100,
+          67,
           categories[1],
           callback
         );
       },
       function (callback) {
         productCreate(
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/800px-Tomato_je.jpg",
-          "Tomato",
-          "The tomato is the edible berry of the plant Solanum lycopersicum",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Patates.jpg/1024px-Patates.jpg",
+          "Potato",
+          "The potato is a starchy tuber of the plant Solanum tuberosum and is a root vegetable native to the Americas. The plant is a perennial in the nightshade family Solanaceae.[2]",
           44,
           50,
+          categories[0],
+          callback
+        );
+      },
+      function (callback) {
+        productCreate(
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cajanus_cajan_Blanco1.167-cropped.jpg/800px-Cajanus_cajan_Blanco1.167-cropped.jpg",
+          "Pigeon Peas",
+          "The pigeon pea[1] (Cajanus cajan) is a perennial legume from the family Fabaceae native to the Old World",
+          89,
+          100,
           categories[1],
           callback
         );
       },
       function (callback) {
         productCreate(
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/800px-Tomato_je.jpg",
-          "Tomato",
-          "The tomato is the edible berry of the plant Solanum lycopersicum",
-          44,
-          50,
-          categories[1],
-          callback
-        );
-      },
-      function (callback) {
-        productCreate(
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/800px-Tomato_je.jpg",
-          "Tomato",
-          "The tomato is the edible berry of the plant Solanum lycopersicum",
-          44,
-          50,
+          "https://cdn.britannica.com/90/94190-050-C0BA6A58/Cereal-crops-wheat-reproduction.jpg",
+          "wheat",
+          "wheat, any of several species of cereal grasses of the genus Triticum (family Poaceae) and their edible grains",
+          30,
+          500,
           categories[1],
           callback
         );
