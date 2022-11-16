@@ -7,3 +7,26 @@ body {
 a {
   color: whitesmoke
 }
+  .productClass {
+    display: flex;
+    background-color: yellow;
+    flex-direction: column;
+}
+
+
+.productDetails {
+  display: flex;
+}
+
+img{
+  border-radius: 10px solid black;
+  height: 150px;
+  width: 150px;
+
+}
+.hOne{
+  text-align-last: center;
+}
+
+
+/* form for create product   */

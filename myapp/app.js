@@ -12,7 +12,8 @@ const mongoDB =
 var categoryRouter = require("./routes/catalog");
 var productRouter = require("./routes/catalog");
 var CategoryById = require("./routes/catalog");
-
+var createRouter = require("./routes/catalog");
+var newitem = require("./routes/catalog");
 var app = express();
 
 // view engine setup
@@ -30,6 +31,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", categoryRouter);
 app.use("/product", productRouter);
 app.use("catalog/category/:id", CategoryById);
+app.use("/Category/create", createRouter);
+app.use("/createItem", newitem);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

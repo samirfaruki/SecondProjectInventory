@@ -7,13 +7,36 @@
 </head>
 
 <body>
+    <h1 class="hOne">Here is The list of Products detail</h1>
     <div class="productClass">
-        <% for(var i=0; i < product.length; i++) {%>
-            <li>
-                <%= product[i].P_name %>
-            </li>
-            <li><img src="<%=product[i].src%>" /></li>
-            <% } %>
+        <ul class="productDetails">
+            <% for(var i=0; i < product.length; i++) {%>
+
+
+
+
+                <li class="imageClass"><img src="<%=product[i].src%>" /></li>
+                <ul class="nameDes">
+                    <li>
+                        <%= product[i].P_name %>
+                    </li>
+                    <li>
+                        <%= product[i].P_discription %>
+                    </li>
+                    <li>
+                        <span>&#8377;</span>
+                        <%= product[i].P_price %><span>/Kg</span>
+                    </li>
+                    <li>
+                        <span>Stock:</span>
+                        <%= product[i].P_quantity %><span>Kg</span>
+                    </li>
+                </ul>
+
+
+                <% } %>
+        </ul>
+
 
 
     </div>
