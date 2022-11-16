@@ -17,6 +17,7 @@ exports.CategoryById = async (req, res, next) => {
   try {
     var id = req.params.id;
     const data = await product.find({});
+
     var result = [];
     for (var i = 0; i < data.length; i++) {
       console.log(data[i]);
@@ -25,7 +26,7 @@ exports.CategoryById = async (req, res, next) => {
       }
     }
 
-    res.send(result);
+    res.render("display", { product: result });
   } catch (e) {
     console.log(e.message);
   }

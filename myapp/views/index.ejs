@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('header') -%>
+        <title>
+            <%= title %>
+        </title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <% for(var i=0; i < data.length; i++) {%>
+        <li class="weapon"><a href="<%= data[i].url %>">
+                <%= data[i].C_name %>
+            </a></li>
+        <% } %>
+
+
+
+</body>
+
+</html>

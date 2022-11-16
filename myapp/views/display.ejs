@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <div class="productClass">
+        <% for(var i=0; i < product.length; i++) {%>
+            <li>
+                <%= product[i].P_name %>
+            </li>
+            <li><img src="<%=product[i].src%>" /></li>
+            <% } %>
+
+
+    </div>
+
+
+</body>
+
+</html>
