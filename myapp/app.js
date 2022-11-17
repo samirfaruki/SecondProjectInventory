@@ -13,7 +13,7 @@ var categoryRouter = require("./routes/catalog");
 var productRouter = require("./routes/catalog");
 var CategoryById = require("./routes/catalog");
 var createRouter = require("./routes/catalog");
-var newitem = require("./routes/catalog");
+var postRouter = require("./routes/catalog");
 var app = express();
 
 // view engine setup
@@ -32,7 +32,7 @@ app.use("/", categoryRouter);
 app.use("/product", productRouter);
 app.use("catalog/category/:id", CategoryById);
 app.use("/Category/create", createRouter);
-app.use("/createItem", newitem);
+app.use("/createItem", postRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

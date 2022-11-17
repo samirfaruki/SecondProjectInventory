@@ -2,21 +2,22 @@
 <html>
 
 <head>
-
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
 </head>
 
 <body>
     <h1 class="hOne">Here is The list of Products detail</h1>
-    <div class="productClass">
-        <ul class="productDetails">
-            <% for(var i=0; i < product.length; i++) {%>
 
+    <div class="product">
+        <% for(var i=0; i < product.length; i++) {%>
 
-
-
-                <li class="imageClass"><img src="<%=product[i].src%>" /></li>
-                <ul class="nameDes">
+            <div class="card" style="width: 18rem;">
+                <li>
+                    <img class="card-img-top" src="<%=product[i].src%>" alt="Card image cap">
+                </li>
+                <div class="card-body">
                     <li>
                         <%= product[i].P_name %>
                     </li>
@@ -31,17 +32,50 @@
                         <span>Stock:</span>
                         <%= product[i].P_quantity %><span>Kg</span>
                     </li>
-                </ul>
 
 
+
+
+
+
+                </div>
                 <% } %>
-        </ul>
 
-
-
-    </div>
-
+            </div>
 
 </body>
 
 </html>
+
+<!-- 
+
+
+
+<ul class="productDetails">
+    <% for(var i=0; i < product.length; i++) {%>
+
+
+
+        <div>
+            <li class="imageClass"><img src="<%=product[i].src%>" /></li>
+            <ul class="nameDes">
+                <li>
+                    <%= product[i].P_name %>
+                </li>
+                <li>
+                    <%= product[i].P_discription %>
+                </li>
+                <li>
+                    <span>&#8377;</span>
+                    <%= product[i].P_price %><span>/Kg</span>
+                </li>
+                <li>
+                    <span>Stock:</span>
+                    <%= product[i].P_quantity %><span>Kg</span>
+                </li>
+        </div>
+</ul>
+
+
+<% } %>
+    </ul> --> -->
