@@ -11,7 +11,7 @@ router.get("/catalog/category/:id", CategoryRouter.CategoryById, () => {
 router.get("/product", productRouter.productList);
 router.get("/Category/createItem", createRouter.productcreate);
 
-router.post("/createItem", postRouter.postproduct);
-router.patch("/productUpdate/:id",productRouter.updateProduct)
-router.delete("/productDelete/:id",productRouter.deleteProduct)
+router.post("/Category/createItem", postRouter.postproduct);
+router.patch("/productUpdate/:id", productRouter.updateProduct);
+router.delete("/productDelete/:id", productRouter.deleteProduct);
 module.exports = router;

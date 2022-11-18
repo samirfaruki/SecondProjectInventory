@@ -162,26 +162,26 @@
         <i class="fas fa-graduation-cap"></i>
 
       </div>
-      <form action="/" method="post">
+      <form action="" method="post">
         <div class="title">
           <i class="fas fa-pencil-alt"></i>
           <h2>Register here</h2>
         </div>
         <div class="info">
-          <input class="fname" type="text" name="name" placeholder="Full name">
-          <input type="text" name="name" placeholder="DESCRIPTION">
+          <input class="fname" type="text" name="P_name" placeholder="Full name">
+          <input type="text" name="P_discription" placeholder="DESCRIPTION">
 
-          <select>
-            <option selected>select category*</option>
+          <select name="P_category" id="P_category">
+
             <% for(var i=0; i < categories.length; i++) {%>
-              <option <%=categories[i].C_name %>><%= categories[i].C_name %>
+              <option selected <%=categories[i].C_name %>><%= categories[i].C_name %>
               </option>
               <% } %>
 
           </select>
-          <input type="text" name="name" placeholder="price">
-          <input type="password" name="quantity" placeholder="stockQuantity">
-          <input type="url" name="images" placeholder="images">
+          <input type="text" name="P_price" placeholder="price">
+          <input type="password" name="P_quantity" placeholder="stockQuantity">
+          <input type="url" name="src" placeholder="images">
         </div>
         <div class="checkbox">
           <input type="checkbox" name="checkbox"><span>I agree to the <a

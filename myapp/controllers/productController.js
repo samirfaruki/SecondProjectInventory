@@ -38,13 +38,14 @@ exports.postproduct = async (req, res) => {
 
     P_discription: req.body.P_discription,
 
-    P_category: req.body.P_category,
+    P_category: mongoose.Types.ObjectId(req.params.id),
 
     P_price: req.body.P_price,
 
     P_quantity: req.body.P_quantity,
 
     src: req.body.src,
+    // _id: req.params.id,
   });
 
   console.log(newitem);
@@ -52,14 +53,14 @@ exports.postproduct = async (req, res) => {
   newitem.save(function (err) {
     if (err) throw err;
 
-    res.send("updated");
+    res.send("data inserted");
   });
 };
 
 exports.updateProduct = async (req, res) => {
   try {
     const dataupdate = await ProductSchema.updateOne(
-      { "_id": mongoose.Types.ObjectId(req.params.id.trim()) },
+      { _id: mongoose.Types.ObjectId(req.params.id.trim()) },
       {
         P_name: req.body.P_name,
 
@@ -80,13 +81,11 @@ exports.updateProduct = async (req, res) => {
   }
 };
 
-
 exports.deleteProduct = async (req, res) => {
   try {
-    const datadeleted = await ProductSchema.findByIdAndDelete(
-      { "_id": mongoose.Types.ObjectId(req.params.id.trim()) },
-     
-    );
+    const datadeleted = await ProductSchema.findByIdAndDelete({
+      _id: mongoose.Types.ObjectId(req.params.id.trim()),
+    });
     res.send(datadeleted);
   } catch (e) {
     console.log(e.message);
