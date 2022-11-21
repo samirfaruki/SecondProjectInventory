@@ -4,9 +4,9 @@ exports.CategoryList = async (req, res, next) => {
   try {
     const data = await Categ.find({});
     console.log(data);
-    res.render("index", {
+    res.render("header", {
       data: data,
-      title: " hello this is my first proect in pug",
+      display: false,
     });
   } catch (e) {
     console.log(e.message);
@@ -31,4 +31,3 @@ exports.CategoryById = async (req, res, next) => {
     console.log(e.message);
   }
 };
-

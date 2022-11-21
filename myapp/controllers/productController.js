@@ -38,7 +38,7 @@ exports.postproduct = async (req, res) => {
 
     P_discription: req.body.P_discription,
 
-    P_category: mongoose.Types.ObjectId(req.params.id),
+    P_category: req.body.P_category,
 
     P_price: req.body.P_price,
 
@@ -53,7 +53,7 @@ exports.postproduct = async (req, res) => {
   newitem.save(function (err) {
     if (err) throw err;
 
-    res.send("data inserted");
+    res.redirect("/");
   });
 };
 

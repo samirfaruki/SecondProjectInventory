@@ -2,22 +2,60 @@
 <html>
 
 <head>
-    <%- include('header') -%>
-        <title>
-            <%= title %>
-        </title>
-        <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <title>
+
+        welcome back
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-    <h1>
-        <%= title %>
-    </h1>
-    <% for(var i=0; i < data.length; i++) {%>
-        <li class="weapon"><a href="<%= data[i].url %>">
-                <%= data[i].C_name %>
-            </a></li>
-        <% } %>
+    <div class="aboutPage">
+        <h1 class="about">This is about My Categories </h1>
+        <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum soluta inventore
+            temporibus iusto
+            ducimus sunt minus vitae eos neque, placeat praesentium deleniti sequi modi maxime velit non
+            alias, iste nobis?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim corrupti repellat in voluptas,
+            cumque libero ex doloribus, ducimus unde obcaecati accusantium, iure deleniti nemo dolores
+            vitaeagnam saepe soluta natus.
+        </p>
+    </div>
+    <div class="category">
+        <div class="list-group">
+            <% if(display==='true' ) { %>
+                <% for(var i=0; i < data.length; i++) {%>
+                    <li class="weapon">
+                        <a href="<%= data[i].url %>" class="list-group-item list-group-item-action active link">
+                            <%= data[i].C_name %>
+                        </a>
+                    </li>
+                    <% } %>
+                        <% } %>
+
+        </div>
+    </div>
+
+
+
+    <!-- 
+                <% if(display==='true' ) { %>
+                    <% for(var i=0; i < data.length; i++) {%>
+                        <li class="weapon">
+                            <a href="<%= data[i].url %>">
+                                <%= data[i].C_name %>
+                            </a>
+                        </li>
+                        <% } %>
+                            <% } %> --> --> -->
+
+
+
+
+
+
+    </div>
 
 
 

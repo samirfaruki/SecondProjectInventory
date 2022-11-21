@@ -30,3 +30,15 @@ img{
 
 
 /* form for create product   */
+
+
+.about{
+  margin-top: 87px;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.link{
+  color: cyan;
+  font-weight: bold;
+}

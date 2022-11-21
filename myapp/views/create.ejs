@@ -152,7 +152,7 @@
     }
   }
 </style>
-<%- include('header') -%>
+
   <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
 
@@ -171,15 +171,16 @@
           <input class="fname" type="text" name="P_name" placeholder="Full name">
           <input type="text" name="P_discription" placeholder="DESCRIPTION">
 
-          <select name="P_category" id="P_category">
+          <select name="P_category">
 
             <% for(var i=0; i < categories.length; i++) {%>
-              <option selected <%=categories[i].C_name %>><%= categories[i].C_name %>
+              <option value="<%- categories[i]._id %>">
+                <%= categories[i].C_name %>
               </option>
               <% } %>
 
           </select>
-          <input type="text" name="P_price" placeholder="price">
+          <input type=" text" name="P_price" placeholder="price">
           <input type="password" name="P_quantity" placeholder="stockQuantity">
           <input type="url" name="src" placeholder="images">
         </div>
