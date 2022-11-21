@@ -4,8 +4,21 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
-const mongoDB =
-  "mongodb+srv://samir:8910531665@cluster0.9vwpyfe.mongodb.net/local_store?retryWrites=true&w=majority";
+require("dotenv").config()
+const mongoDB = process.env.MONGO_KEY;
+
+
+
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true });// database connectivity
+
+
+
+const db1 = mongoose.connection;
+
+
+
+db1.on('error', console.error.bind(console, 'MongoDB connection error:'));
+  
 
 // var indexRouter = require("./routes/index");
 // var usersRouter = require("./routes/users");
